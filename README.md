@@ -35,7 +35,7 @@ No modules.
 | <a name="input_catalog_item_version"></a> [catalog\_item\_version](#input\_catalog\_item\_version) | Version of the catalog item (optional; if null, provider will typically use the latest) | `string` | `null` | no |
 | <a name="input_deployment_name"></a> [deployment\_name](#input\_deployment\_name) | Name of the deployment | `string` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description of the deployment | `string` | `null` | no |
-| <a name="input_inputs"></a> [inputs](#input\_inputs) | Inputs passed to the blueprint or catalog item | `map(any)` | `{}` | no |
+| <a name="input_inputs"></a> [inputs](#input\_inputs) | Inputs passed to the blueprint or catalog item | `any` | `{}` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Name of the vRA Project where the deployment is created | `string` | n/a | yes |
 
 ## Outputs
