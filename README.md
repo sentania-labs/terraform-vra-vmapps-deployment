@@ -1,1 +1,0 @@
-# terraform-vra-vmapps-deployment
