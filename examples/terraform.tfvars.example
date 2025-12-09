@@ -1,0 +1,45 @@
+deployments = {
+  mySixthDeployment = {
+    project_name    = "sandbox"
+    blueprint_name  = "VM With Disks"
+    deployment_name = "Deployed from Template"
+    description     = "Provisioned by TF"
+    inputs = {
+      flavorSize = "medium"
+      diskCount  = 2
+      diskSize   = 10
+      image      = "ubuntu22"
+    }
+  },
+  deploymentWithTags = {
+    project_name      = "sandbox"
+    blueprint_name    = "VM With Disks"
+    deployment_name   = "Deployed from Template"
+    blueprint_version = 3
+    description       = "Provisioned by TF"
+    inputs = {
+      flavorSize = "medium"
+      diskCount  = 2
+      diskSize   = 10
+      image      = "ubuntu22"
+      tags = [
+        { key = "serviceLevel", value = "production" },
+        { key = "application", value = "finance" }
+      ]
+    }
+  },
+  deploymentExpectedTags = {
+    project_name       = "sandbox"
+    catalog_item_name  = "VM With Disks"
+    deployment_name    = "Deployed from Template"
+    description        = "Provisioned by TF"
+    inputs = {
+      flavorSize   = "medium"
+      diskCount    = 2
+      diskSize     = 10
+      image        = "ubuntu24"
+      serviceLevel = "sandbox"
+      application  = "sandbox"
+    }
+  }
+}
