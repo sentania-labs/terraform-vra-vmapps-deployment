@@ -16,7 +16,7 @@ permissions:
   pull-requests: write
 
 env:
-  TERRAFORM_VERSION: 1.6
+  TERRAFORM_VERSION: 1.14
 
 defaults:
   run:

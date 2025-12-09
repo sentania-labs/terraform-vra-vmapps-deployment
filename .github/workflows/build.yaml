@@ -24,13 +24,13 @@ jobs:
       uses: anothrNick/github-tag-action@1.64.0 
       env:
         DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }} 
         WITH_V: true
     
     - name: Generate release    
       uses: marvinpinto/action-automatic-releases@latest
       with:
         automatic_release_tag: ${{ steps.tag.outputs.tag }}
-        repo_token: ${{ secrets.GITHUB_TOKEN }}  
+        repo_token: ${{ secrets.REPO_ACCESS_TOKEN }}  
         prerelease: false
         draft: false
