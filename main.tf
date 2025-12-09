@@ -17,11 +17,9 @@ resource "vra_deployment" "this" {
   description = var.description
   project_id  = data.vra_project.this.id
 
-  # Launch source: blueprint or catalog item (mutually exclusive at variable level)
-
   blueprint_id = (
     length(data.vra_blueprint.this) > 0
-    ? one(data.vra_blueprint.this).id
+    ? one(values(data.vra_blueprint.this)).id
     : null
   )
 
@@ -33,7 +31,7 @@ resource "vra_deployment" "this" {
 
   catalog_item_id = (
     length(data.vra_catalog_item.this) > 0
-    ? one(data.vra_catalog_item.this).id
+    ? one(values(data.vra_catalog_item.this)).id
     : null
   )
 
@@ -57,3 +55,4 @@ resource "vra_deployment" "this" {
     delete = "2h"
   }
 }
+
