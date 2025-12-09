@@ -71,7 +71,7 @@ variable "catalog_item_version" {
  ******************************************/
 
 variable "inputs" {
-  type        = map(any)
+  type        = any
   description = "Inputs passed to the blueprint or catalog item"
   default     = {}
 }

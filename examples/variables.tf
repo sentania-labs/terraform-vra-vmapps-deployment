@@ -36,6 +36,6 @@ variable "deployments" {
     catalog_item_version = optional(string)
 
     # Blueprint / catalog inputs
-    inputs = map(any)
+    inputs = any
   }))
 }
